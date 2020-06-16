@@ -20,8 +20,6 @@ class CreateEventsTable extends Migration
             $table->date('event_date');
             $table->string('event_location');
             $table->integer('event_duration');
-            $table->string('event_guest');
-            $table->string('event_sponsor');
             $table->timestamps();
         });
     }

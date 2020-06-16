@@ -24,10 +24,7 @@
                 <label class="mt-1" for="event_location">Event location:</label><br>
                 <input name="event_location" class="col-sm-12 col-md-10 col-lg-8 col-xl-6" type="text" placeholder="Campus, Room Number"><br>
                 <label class="mt-1" for="event_duration">Event duration</label><br>
-                <input name="event_duration" class="col-sm-3 col-md-2 col-lg-2 col-xl-2 pl-2" type="number"><label for="event_duration" class="ml-1">Binus Hours</label><br>
-                <label for="event_guest">Event Guest:</label><br>
-                <input class="col-sm-12 col-md-10 col-lg-8 col-xl-6" name="event_guest" placeholder="guest name" class="mt-1" type="text"><br>
-                <button class="mt-3" type="submit">Submit</button><br>
+                <input name="event_duration" class="col-sm-3 col-md-2 col-lg-2 col-xl-2 pl-2" type="number"><label for="event_duration" class="ml-1">Binus Hours</label><br>                <button class="mt-3" type="submit">Submit</button><br>
             </form>
         </div>
         <a href="/">Back</a>

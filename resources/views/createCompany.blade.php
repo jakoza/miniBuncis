@@ -17,7 +17,13 @@
                 @csrf
                 <label for="company_name">Company Name:</label><br>
                 <input name="company_name" class="col-sm-12 col-md-10 col-lg-8 col-xl-6" type="text" placeholder="enter company name"><br>
-                <button class="mt-3" type="submit">Submit</button><br>
+                <label class="mt-2" for="event_part">Event Participation</label>
+                <select name="event_part" id="">
+                    @foreach($events as $event)
+                    <option value="{{$event->id}}">{{$event->event_name}}</option>
+                    @endforeach
+                </select><br>
+                <button class="mt-2" type="submit">Submit</button><br>
             </form>
         </div>
         <a href="/">Back</a>

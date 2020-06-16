@@ -15,8 +15,6 @@ class CreateGuestsTable extends Migration
     {
         Schema::create('guests', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('company_id')->unsigned();   
-            $table->foreign('company_id')->references('id')->on('companies');
             $table->bigInteger('event_id')->unsigned();   
             $table->foreign('event_id')->references('id')->on('events');
             $table->string('guest_name');

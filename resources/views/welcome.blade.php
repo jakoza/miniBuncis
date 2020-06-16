@@ -27,16 +27,25 @@
                         <th>Event Date</td>
                         <th>Event Location</th>
                         <th>Event Duration</th>
+                        <th>Sponsors</th>
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach($events as $event)
                     <tr>
-                        <td>Event1</td>
-                        <td>Seminar</td>
-                        <td>DD/MM/YYYY</td>
-                        <td>Binus Anggrek</td>
-                        <td>1hour</td>
+                        <td>{{$event->event_name}}</td>
+                        <td>{{$event->event_type}}</td>
+                        <td>{{$event->event_date}}</td>
+                        <td>{{$event->event_location}}</td>
+                        <td>{{$event->event_duration}} Binus Hours</td>
+                        <td><?php if($event->event_id = $company->event_id){
+                            echo "$company->company_name";
+                            }else{
+                                echo "none";
+                             }?>
+                        </td>
                     </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>
@@ -69,20 +78,14 @@
                 <thead>
                     <tr>
                         <th>Company Name</th>
-                        <th>Contact Number</td>
-                        <th>Company Location</th>
-                        <th>Event</th>
-                        <th>Participation Role</th>
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach($companies as $company)
                     <tr>
-                        <td>Company 1</td>
-                        <td>+628XXXXXXXXXX</td>
-                        <td>Jakarta Barat</td>
-                        <td>Event 1</td>
-                        <td>Sponsor</td>
+                        <td>{{$company->company_name}}</td>
                     </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

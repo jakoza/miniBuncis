@@ -9,8 +9,10 @@ class companyController extends Controller
 {
     public function store(Request $request){
         company::create([
-            'company_name'=>$request->company_name,
-            'event_part'=>$request->event_id
+            'event_id'=>$request->event_part,
+            'company_name'=>$request->company_name
+            
         ]);
+        return back();
     }
 }
